@@ -1,38 +1,185 @@
+
 .App {
-  text-align: center;
+  display: flex;
+  gap: 10%;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left {
+  flex: 1;
+}
+.right {
+  flex: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+span {
+  background-color: #FA7070;
+  color: white;
+  padding: 3px 20px;
+  margin-left: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
+  padding: 8px 30% 8px 2%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(231, 231, 231);
+}
+
+.textAreas {
+  background-color: #FBF2CF;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 3px solid #FA7070;
+  margin-top: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
+  margin-left: 5px;
+  position: relative;
+}
+
+.textAreas input {
+  border: none;
+  outline: none;
+  background-color: #FBF2CF;
+}
+
+.textAreas textarea {
+  /* border: 15;
+  box-shadow: none;
+  margin: 15; */
+  border: none;
+  outline: none;
+  /* overflow: hidden; */
+  resize: none; 
+  margin-top: 15px;
+  background-color: #FBF2CF;
+}
+
+.textAreas button {
+  align-items: flex-end;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: #FBF2CF;
+  border-top: 3px solid #FA7070;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  padding-left: 3%;
+}
+
+.tasks h1 {
+  color: #FA7070;
+  margin: 0;
+  cursor: pointer;
+}
+
+.tasks h1:hover {
+  color: #cf5f5f;
+}
+
+.tasks p {
+  margin-top: 10px;
+  margin-bottom: 15%;
+}
+
+.cancel-btn {
+  background-color: #FBF2CF;
+  color: #FA7070;
+  font-weight: 600;
+  font-size: medium;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.cancel-btn:hover {
+  background-color: #FBF2CF;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.edit-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+} 
+
+
+.blur {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ backdrop-filter: blur(20px);
+}
+
+.editModal {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 60%;
+  height: 60%;
+  background-color: lightblue;
+}
+
+button {
+  background-color: #FA7070;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+button:hover{
+  background-color: #cf5f5f;
+}
+
+.editModal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #FBF2CF;
+  border: 5px solid #FA7070;
+}
+
+.editModal h1 {
+  color: #FA7070;
+  margin-bottom: 10%;
+}
+
+.editModal textarea {
+  resize: none;
+}
+
+.editModal button {
+  margin: 20px;
+}
+
+.right-active {
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #FA7070;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: 700;
+  margin: 2%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
